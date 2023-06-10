@@ -36,7 +36,7 @@ public class Hufflepuff extends Hogwarts{
 
     @Override
     public String toString() {
-        return "Пуффендуй: " + "ФИО - " + Hufflepuff.super.getFullName() + ", магическая сила - " + Hufflepuff.super.getMagicPower() + ", расстояние трансгрессии - " + Hufflepuff.super.getTransgressionDistance() + ", трудолюбие - " + diligence + ", верность - " + loyalty + ", честность - " + honesty;
+        return "Пуффендуй: " + "ФИО - " + super.getFullName() + ", магическая сила - " + super.getMagicPower() + ", расстояние трансгрессии - " + super.getTransgressionDistance() + ", трудолюбие - " + diligence + ", верность - " + loyalty + ", честность - " + honesty;
     }
 
     public static void printAllStudents(Hufflepuff[] hufflepuffs) {
@@ -49,8 +49,10 @@ public class Hufflepuff extends Hogwarts{
     public static void findBestHufflepuff(Hufflepuff[] hufflepuff, Hufflepuff[] hufflepuff1) {
         if (hufflepuff[0].getDiligence() + hufflepuff[0].getLoyalty() + hufflepuff[0].getHonesty() < hufflepuff1[1].getDiligence() + hufflepuff1[0].getLoyalty() + hufflepuff1[0].getHonesty()) {
             System.out.println("Лучший " + hufflepuff1[1]);
-        } else {
+        } else if (hufflepuff[0].getDiligence() + hufflepuff[0].getLoyalty() + hufflepuff[0].getHonesty() > hufflepuff1[1].getDiligence() + hufflepuff1[0].getLoyalty() + hufflepuff1[0].getHonesty()) {
             System.out.println("Лучший " + hufflepuff[0]);
+        } else {
+            System.out.println("Ученики равны");
         }
     }
 }

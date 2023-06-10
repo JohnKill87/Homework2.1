@@ -37,7 +37,7 @@ public class Gryffindor extends Hogwarts{
     }
         @Override
     public String toString() {
-        return "Гриффиндор: " + "ФИО - " + Gryffindor.super.getFullName() + ", магическая сила - " + Gryffindor.super.getMagicPower() + ", расстояние трансгрессии - " + Gryffindor.super.getTransgressionDistance() + ", благородство - " + nobleness + ", честь - " + honor + ", храбрость - " + bravery;
+        return "Гриффиндор: " + "ФИО - " + super.getFullName() + ", магическая сила - " + super.getMagicPower() + ", расстояние трансгрессии - " + super.getTransgressionDistance() + ", благородство - " + nobleness + ", честь - " + honor + ", храбрость - " + bravery;
     }
     public static void printAllStudents(Gryffindor[] gryffindors) {
         System.out.println("Список учеников Гриффиндора");
@@ -49,8 +49,10 @@ public class Gryffindor extends Hogwarts{
     public static void findBestGryffindor(Gryffindor[] gryffindor, Gryffindor[] gryffindor1) {
         if (gryffindor[0].getNobleness() + gryffindor[0].getHonor() + gryffindor[0].getBravery() < gryffindor1[1].getNobleness() + gryffindor1[1].getHonor() + gryffindor1[1].getBravery()) {
             System.out.println("Лучший " + gryffindor1[1]);
-        } else {
+        } else if (gryffindor[0].getNobleness() + gryffindor[0].getHonor() + gryffindor[0].getBravery() > gryffindor1[1].getNobleness() + gryffindor1[1].getHonor() + gryffindor1[1].getBravery()) {
             System.out.println("Лучший " + gryffindor[0]);
+        } else {
+            System.out.println("Ученики равны");
         }
     }
 }

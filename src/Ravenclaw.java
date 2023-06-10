@@ -46,7 +46,7 @@ public class Ravenclaw extends Hogwarts{
 
     @Override
     public String toString() {
-        return "Когтевран: " + "ФИО - " + Ravenclaw.super.getFullName() + ", магическая сила - " + Ravenclaw.super.getMagicPower() + ", расстояние трансгрессии - " + Ravenclaw.super.getTransgressionDistance() + ", ум - " + intelligence + ", мудрость - " + wisdom + ", остроумие - " + wittiness + ", творчество - " + creativity;
+        return "Когтевран: " + "ФИО - " +super.getFullName() + ", магическая сила - " + super.getMagicPower() + ", расстояние трансгрессии - " + super.getTransgressionDistance() + ", ум - " + intelligence + ", мудрость - " + wisdom + ", остроумие - " + wittiness + ", творчество - " + creativity;
     }
 
     public static void printAllStudents(Ravenclaw[] ravenclaws) {
@@ -59,8 +59,10 @@ public class Ravenclaw extends Hogwarts{
     public static void findBestRavenclaw(Ravenclaw[] ravenclaw, Ravenclaw[] ravenclaw1) {
         if (ravenclaw[0].getIntelligence() + ravenclaw[0].getWisdom() + ravenclaw[0].getWittiness() + ravenclaw[0].getCreativity() < ravenclaw1[1].getIntelligence() + ravenclaw1[1].getWisdom() + ravenclaw1[1].getWittiness() + ravenclaw1[1].getCreativity()) {
             System.out.println("Лучший " + ravenclaw1[1]);
-        } else {
+        } else if (ravenclaw[0].getIntelligence() + ravenclaw[0].getWisdom() + ravenclaw[0].getWittiness() + ravenclaw[0].getCreativity() > ravenclaw1[1].getIntelligence() + ravenclaw1[1].getWisdom() + ravenclaw1[1].getWittiness() + ravenclaw1[1].getCreativity()) {
             System.out.println("Лучший " + ravenclaw[0]);
+        } else {
+            System.out.println("Ученики равны");
         }
     }
 }

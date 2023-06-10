@@ -1,4 +1,4 @@
-public class Hogwarts {
+public abstract class Hogwarts {
     private String fullName;
     private int magicPower;
 
@@ -29,6 +29,12 @@ public class Hogwarts {
     public void setTransgressionDistance(int transgressionDistance) {
         this.transgressionDistance = transgressionDistance;
     }
+
+    @Override
+    public String toString() {
+        return "Hogwarts{" + "fullName='" + fullName + '\'' + ", magicPower=" + magicPower + ", transgressionDistance=" + transgressionDistance + '}';
+    }
+
     public static void printSeparator() {
         System.out.println("====================");
     }

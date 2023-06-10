@@ -56,7 +56,7 @@ public class Slytherin extends Hogwarts{
 
     @Override
     public String toString() {
-        return "Слизерин: " + "ФИО - " + Slytherin.super.getFullName() + ", магическая сила - " + Slytherin.super.getMagicPower() + ", расстояние трансгрессии - " + Slytherin.super.getTransgressionDistance() + ", хитрость - " + cunning + ", Решительность - " + determination + ", амбициозность - " + ambition + ", находчивость - " + resourcefulness + ", жажда власти - " + lustForPower;
+        return "Слизерин: " + "ФИО - " + super.getFullName() + ", магическая сила - " + super.getMagicPower() + ", расстояние трансгрессии - " + super.getTransgressionDistance() + ", хитрость - " + cunning + ", Решительность - " + determination + ", амбициозность - " + ambition + ", находчивость - " + resourcefulness + ", жажда власти - " + lustForPower;
     }
 
     public static void printAllStudents(Slytherin[] slytherins) {
@@ -69,8 +69,10 @@ public class Slytherin extends Hogwarts{
     public static void findBestSlytherin(Slytherin[] slytherin, Slytherin[] slytherin1) {
         if (slytherin[0].getCunning() + slytherin[0].getDetermination() + slytherin[0].getAmbition() + slytherin[0].getResourcefulness() + slytherin[0].getLustForPower() < slytherin1[1].getCunning() + slytherin1[1].getDetermination() + slytherin1[1].getAmbition() + slytherin1[1].getResourcefulness() + slytherin1[1].getLustForPower()) {
             System.out.println("Лучший " + slytherin1[1]);
-        } else {
+        } else if (slytherin[0].getCunning() + slytherin[0].getDetermination() + slytherin[0].getAmbition() + slytherin[0].getResourcefulness() + slytherin[0].getLustForPower() > slytherin1[1].getCunning() + slytherin1[1].getDetermination() + slytherin1[1].getAmbition() + slytherin1[1].getResourcefulness() + slytherin1[1].getLustForPower()) {
             System.out.println("Лучший " + slytherin[0]);
+        } else {
+            System.out.println("Ученики равны");
         }
     }
 }
