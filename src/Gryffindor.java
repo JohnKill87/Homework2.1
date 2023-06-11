@@ -46,11 +46,11 @@ public class Gryffindor extends Hogwarts{
             System.out.println("ФИО: " + gryffindor.getFullName() + ", магическая сила - " + gryffindor.getMagicPower() + ", расстояние трансгрессии - " + gryffindor.getTransgressionDistance() + ", благородство - " + gryffindor.getNobleness() + ", честь - " + gryffindor.getHonor() + ", храбрость - " + gryffindor.getBravery());
         }
     }
-    public static void findBestGryffindor(Gryffindor[] gryffindor, Gryffindor[] gryffindor1) {
-        if (gryffindor[0].getNobleness() + gryffindor[0].getHonor() + gryffindor[0].getBravery() < gryffindor1[1].getNobleness() + gryffindor1[1].getHonor() + gryffindor1[1].getBravery()) {
-            System.out.println("Лучший " + gryffindor1[1]);
-        } else if (gryffindor[0].getNobleness() + gryffindor[0].getHonor() + gryffindor[0].getBravery() > gryffindor1[1].getNobleness() + gryffindor1[1].getHonor() + gryffindor1[1].getBravery()) {
-            System.out.println("Лучший " + gryffindor[0]);
+    public static void findBestGryffindor(Gryffindor gryffindor, Gryffindor gryffindor1) {
+        if (gryffindor.getNobleness() + gryffindor.getHonor() + gryffindor.getBravery() < gryffindor1.getNobleness() + gryffindor1.getHonor() + gryffindor1.getBravery()) {
+            System.out.println("Лучший " + gryffindor1);
+        } else if (gryffindor.getNobleness() + gryffindor.getHonor() + gryffindor.getBravery() > gryffindor1.getNobleness() + gryffindor1.getHonor() + gryffindor1.getBravery()) {
+            System.out.println("Лучший " + gryffindor);
         } else {
             System.out.println("Ученики равны");
         }

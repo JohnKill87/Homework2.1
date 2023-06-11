@@ -38,11 +38,11 @@ public abstract class Hogwarts {
     public static void printSeparator() {
         System.out.println("====================");
     }
-    public static void comparisonOfStudentAbilities(Gryffindor[] gryffindor, Slytherin[] slytherin) {
-        if (gryffindor[0].getMagicPower() + gryffindor[0].getTransgressionDistance() > slytherin[0].getMagicPower() + slytherin[0].getTransgressionDistance()) {
-            System.out.println("Лучший по силе магии и трансгрессии " + gryffindor[0]);
+    public static void comparisonOfStudentAbilities(Hogwarts student1, Hogwarts student2) {
+        if (student1.getMagicPower() + student1.getTransgressionDistance() > student2.getMagicPower() + student2.getTransgressionDistance()) {
+            System.out.println("Лучший по силе магии и трансгрессии " + student1);
         } else {
-            System.out.println("Лучший по силе магии и трансгрессии " + slytherin[0]);
+            System.out.println("Лучший по силе магии и трансгрессии " + student2);
         }
     }
 }

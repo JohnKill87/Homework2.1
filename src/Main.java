@@ -32,15 +32,15 @@ public class Main {
         Hogwarts.printSeparator();
         Slytherin.printAllStudents(slytherin);
         Hogwarts.printSeparator();
-        Gryffindor.findBestGryffindor(gryffindor, gryffindor);
+        Gryffindor.findBestGryffindor(gryffindor[0], gryffindor[1]);
         Hogwarts.printSeparator();
-        Hufflepuff.findBestHufflepuff(hufflepuff, hufflepuff);
+        Hufflepuff.findBestHufflepuff(hufflepuff[0], hufflepuff[1]);
         Hogwarts.printSeparator();
-        Ravenclaw.findBestRavenclaw(ravenclaw, ravenclaw);
+        Ravenclaw.findBestRavenclaw(ravenclaw[0], ravenclaw[1]);
         Hogwarts.printSeparator();
-        Slytherin.findBestSlytherin(slytherin, slytherin);
+        Slytherin.findBestSlytherin(slytherin[0], slytherin[1]);
         Hogwarts.printSeparator();
-        Hogwarts.comparisonOfStudentAbilities(gryffindor, slytherin);
+        Hogwarts.comparisonOfStudentAbilities(gryffindor[0], slytherin[0]);
     }
 }
 

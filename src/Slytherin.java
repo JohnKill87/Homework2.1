@@ -66,11 +66,11 @@ public class Slytherin extends Hogwarts{
             System.out.println("ФИО " + slytherin.getFullName() + ", магическая сила " + slytherin.getMagicPower() + ", расстояние трансгрессии " + slytherin.getTransgressionDistance() + ", хитрость - " + slytherin.getCunning() + ", Решительность - " + slytherin.getDetermination() + ", амбициозность - " + slytherin.getAmbition() + ", находчивость - " + slytherin.getResourcefulness() + ", жажда власти - " + slytherin.getLustForPower());
         }
     }
-    public static void findBestSlytherin(Slytherin[] slytherin, Slytherin[] slytherin1) {
-        if (slytherin[0].getCunning() + slytherin[0].getDetermination() + slytherin[0].getAmbition() + slytherin[0].getResourcefulness() + slytherin[0].getLustForPower() < slytherin1[1].getCunning() + slytherin1[1].getDetermination() + slytherin1[1].getAmbition() + slytherin1[1].getResourcefulness() + slytherin1[1].getLustForPower()) {
-            System.out.println("Лучший " + slytherin1[1]);
-        } else if (slytherin[0].getCunning() + slytherin[0].getDetermination() + slytherin[0].getAmbition() + slytherin[0].getResourcefulness() + slytherin[0].getLustForPower() > slytherin1[1].getCunning() + slytherin1[1].getDetermination() + slytherin1[1].getAmbition() + slytherin1[1].getResourcefulness() + slytherin1[1].getLustForPower()) {
-            System.out.println("Лучший " + slytherin[0]);
+    public static void findBestSlytherin(Slytherin slytherin, Slytherin slytherin1) {
+        if (slytherin.getCunning() + slytherin.getDetermination() + slytherin.getAmbition() + slytherin.getResourcefulness() + slytherin.getLustForPower() < slytherin1.getCunning() + slytherin1.getDetermination() + slytherin1.getAmbition() + slytherin1.getResourcefulness() + slytherin1.getLustForPower()) {
+            System.out.println("Лучший " + slytherin1);
+        } else if (slytherin.getCunning() + slytherin.getDetermination() + slytherin.getAmbition() + slytherin.getResourcefulness() + slytherin.getLustForPower() > slytherin1.getCunning() + slytherin1.getDetermination() + slytherin1.getAmbition() + slytherin1.getResourcefulness() + slytherin1.getLustForPower()) {
+            System.out.println("Лучший " + slytherin);
         } else {
             System.out.println("Ученики равны");
         }
